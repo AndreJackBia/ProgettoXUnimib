@@ -39,10 +39,10 @@ namespace WindowsFormsApplication1
 
 
         string urlModello = "http://www.adidas.it/BB1826.html";
-        string sizeAttributeKeyOLD = "size-select-BB5039";
-        string sizeAttributeValueOLD = "BB5039_630";
-        string sizeAttributeKey = "size-select-BB1826";
-        string sizeAttributeValue = "BB1826_640";
+        string sizeAttributeKey = "size-select-BB5039";
+        string sizeAttributeValue = "BB5039_630";
+        string sizeAttributeKeyaaaa = "size-select-BB1826";
+        string sizeAttributeValueaa = "BB1826_640";
 
         Stopwatch stopwatch;
         private const int INTERNET_OPTION_END_BROWSER_SESSION = 42;
@@ -172,11 +172,11 @@ namespace WindowsFormsApplication1
                 {
 
 
-                    ((WebBrowser)sender).Document.GetElementById("dwfrm_adyenencrypted_number").SetAttribute("value", "5342070007085235");
+                    ((WebBrowser)sender).Document.GetElementById("dwfrm_adyenencrypted_number").SetAttribute("value", "ehvolevi");
                     ((WebBrowser)sender).Document.GetElementById("dwfrm_adyenencrypted_holderName").SetAttribute("value", "Stefano Carioni");
-                    ((WebBrowser)sender).Document.GetElementById("dwfrm_adyenencrypted_cvc").SetAttribute("value", "739");
-                    wb1.Document.GetElementById("dwfrm_adyenencrypted_expiryMonth").SetAttribute("value", "11");
-                    wb1.Document.GetElementById("dwfrm_adyenencrypted_expiryYear").SetAttribute("value", "2017");
+                    ((WebBrowser)sender).Document.GetElementById("dwfrm_adyenencrypted_cvc").SetAttribute("value", "7");
+                    wb1.Document.GetElementById("dwfrm_adyenencrypted_expiryMonth").SetAttribute("value", "");
+                    wb1.Document.GetElementById("dwfrm_adyenencrypted_expiryYear").SetAttribute("value", "");
                     finalize(wb1, stopwatch);
 
 
