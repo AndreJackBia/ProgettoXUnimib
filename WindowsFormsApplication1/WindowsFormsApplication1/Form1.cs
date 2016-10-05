@@ -38,7 +38,7 @@ namespace WindowsFormsApplication1
         string urlCarta = "https://www.adidas.it/on/demandware.store/Sites-adidas-IT-Site/it_IT/COSummary-Start";
 
 
-        string urlModello = "http://www.adidas.it/BB1826.html";
+        string urlModello = "http://www.adidas.it/BB5039.html";
         string sizeAttributeKey = "size-select-BB5039";
         string sizeAttributeValue = "BB5039_630";
         string sizeAttributeKeyaaaa = "size-select-BB1826";
@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1
 
             wb1 = this.webBrowser1;
             label = this.label1;
-            wb1.sc
+            
             wb1.ScriptErrorsSuppressed = true;
             stopwatch = new Stopwatch();
 
