@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             //this.TopMost = true;
             //this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Normal;
 
             wb1 = this.webBrowser1;
             label = this.label1;
@@ -172,7 +172,7 @@ namespace WindowsFormsApplication1
                 {
 
 
-                    ((WebBrowser)sender).Document.GetElementById("dwfrm_adyenencrypted_number").SetAttribute("value", "ehvolevi");
+                    wb1.Document.GetElementById("dwfrm_adyenencrypted_number").SetAttribute("value", "ehvolevi");
                     ((WebBrowser)sender).Document.GetElementById("dwfrm_adyenencrypted_holderName").SetAttribute("value", "Stefano Carioni");
                     ((WebBrowser)sender).Document.GetElementById("dwfrm_adyenencrypted_cvc").SetAttribute("value", "7");
                     wb1.Document.GetElementById("dwfrm_adyenencrypted_expiryMonth").SetAttribute("value", "");
@@ -188,15 +188,16 @@ namespace WindowsFormsApplication1
 
 
                 }
-                else {
-                    
-              
+                else if (e.Url.ToString() == urlCheckout) {
 
-                        wb1.Document.GetElementById(sizeAttributeKey).SetAttribute("value", sizeAttributeValue);
-                        //((WebBrowser)sender).Document.GetElementById("dwfrm_delivery_singleshipping_shippingAddress_addressFields_firstName").SetAttribute("value", "Stefano");
-                        HtmlElementCollection cartButton = ((WebBrowser)sender).Document.GetElementsByTagName("button").GetElementsByName("add-to-cart-button");
-                        cartButton[0].InvokeMember("Click");
-                        wb1.Navigate("https://www.adidas.it/on/demandware.store/Sites-adidas-IT-Site/it_IT/Cart-Show");
+
+
+                    ((WebBrowser)sender).Document.GetElementById(sizeAttributeKey).SetAttribute("value", sizeAttributeValue);
+                    
+                    //((WebBrowser)sender).Document.GetElementById("dwfrm_delivery_singleshipping_shippingAddress_addressFields_firstName").SetAttribute("value", "Stefano");
+                    HtmlElementCollection cartButton = ((WebBrowser)sender).Document.GetElementsByTagName("button").GetElementsByName("add-to-cart-button");
+                    cartButton[0].InvokeMember("Click");
+                    wb1.Navigate("https://www.adidas.it/on/demandware.store/Sites-adidas-IT-Site/it_IT/Cart-Show");
 
 
                     
