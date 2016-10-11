@@ -16,3 +16,6 @@ C:\Users\stefi\Documents\GitHub\ProgettoXUnimib\WindowsFormsApplication1\Windows
 C:\Users\stefi\Documents\GitHub\ProgettoXUnimib\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 C:\Users\stefi\Documents\GitHub\ProgettoXUnimib\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\stefi\Documents\GitHub\ProgettoXUnimib\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\biagg\Documents\GitHub\ProgettoXUnimib\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\biagg\Documents\GitHub\ProgettoXUnimib\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\biagg\Documents\GitHub\ProgettoXUnimib\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
