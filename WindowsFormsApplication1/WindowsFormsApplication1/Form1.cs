@@ -34,13 +34,13 @@ namespace WindowsFormsApplication1
 
         
         string urlCarrello = "https://www.adidas.it/on/demandware.store/Sites-adidas-IT-Site/it_IT/Cart-Show";
-        string urlCheckout = "https://www.adidas.it/on/demandware.store/Sites-adidas-IT-Site/it_IT/CODelivery-Start";
+        string urlCheckout = "https://www.supremenewyork.com/checkout";
         string urlCarta = "https://www.adidas.it/on/demandware.store/Sites-adidas-IT-Site/it_IT/COSummary-Start";
 
 
         string urlModello = "http://www.supremenewyork.com/shop/y5m740d6k.html";
-        string utf8 = "/342/234/223";
-        string authenticity_token = "xmZhRLnxhuwyCJ1Gvg68721pcmmfuDgLoeu5EWmQTHQ=";
+        string utf8 = "\\342\\234\\223";
+        string authenticity_token = "sl3+IhO1oTLi64kWYKqDWDtnachUToj84ypyPVmX2WA=";
         string size = "29820";
         string qty = "1";
 
@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
             {
 
                 Console.WriteLine("absolute path : {0}, absolute uri : {1}, toString() : {2}", e.Url.AbsolutePath, e.Url.AbsoluteUri, e.Url.ToString());
-
+                
                 ((WebBrowser)sender).Document.GetElementById("utf8").SetAttribute("utf8", utf8);
                 ((WebBrowser)sender).Document.GetElementById("authenticity_token").SetAttribute("authenticity_token", authenticity_token);
                 ((WebBrowser)sender).Document.GetElementById("size").SetAttribute("size", size);
