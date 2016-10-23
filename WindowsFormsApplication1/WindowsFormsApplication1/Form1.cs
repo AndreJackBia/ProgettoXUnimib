@@ -38,11 +38,11 @@ namespace WindowsFormsApplication1
         string urlCarta = "https://www.adidas.it/on/demandware.store/Sites-adidas-IT-Site/it_IT/COSummary-Start";
 
 
-        string urlModello = "http://www.adidas.it/BB5039.html";
-        string sizeAttributeKey = "size-select-BB5039";
-        string sizeAttributeValue = "BB5039_630";
-        string sizeAttributeKeyaaaa = "size-select-BB1826";
-        string sizeAttributeValueaa = "BB1826_640";
+        string urlModello = "http://www.supremenewyork.com/shop/y5m740d6k.html";
+        string utf8 = "/342/234/223";
+        string authenticity_token = "xmZhRLnxhuwyCJ1Gvg68721pcmmfuDgLoeu5EWmQTHQ=";
+        string size = "29820";
+        string qty = "1";
 
         Stopwatch stopwatch;
         private const int INTERNET_OPTION_END_BROWSER_SESSION = 42;
@@ -88,9 +88,16 @@ namespace WindowsFormsApplication1
             wb1.DocumentCompleted += (object sender, WebBrowserDocumentCompletedEventArgs e) =>
 
             {
+
                 Console.WriteLine("absolute path : {0}, absolute uri : {1}, toString() : {2}", e.Url.AbsolutePath, e.Url.AbsoluteUri, e.Url.ToString());
 
-                
+                ((WebBrowser)sender).Document.GetElementById("utf8").SetAttribute("utf8", utf8);
+                ((WebBrowser)sender).Document.GetElementById("authenticity_token").SetAttribute("authenticity_token", authenticity_token);
+                ((WebBrowser)sender).Document.GetElementById("size").SetAttribute("size", size);
+                ((WebBrowser)sender).Document.GetElementById("qty").SetAttribute("qty", qty);
+                HtmlElementCollection addToBasket = ((WebBrowser)sender).Document.GetElementsByTagName("input").GetElementsByName("commit");
+                addToBasket[0].InvokeMember("Click");
+
                 if (e.Url.ToString() == urlCarrello)
                 {
 
@@ -192,7 +199,7 @@ namespace WindowsFormsApplication1
 
 
 
-                    ((WebBrowser)sender).Document.GetElementById(sizeAttributeKey).SetAttribute("value", sizeAttributeValue);
+                   // ((WebBrowser)sender).Document.GetElementById(sizeAttributeKey).SetAttribute("value", sizeAttributeValue);
                     
                     //((WebBrowser)sender).Document.GetElementById("dwfrm_delivery_singleshipping_shippingAddress_addressFields_firstName").SetAttribute("value", "Stefano");
                     HtmlElementCollection cartButton = ((WebBrowser)sender).Document.GetElementsByTagName("button").GetElementsByName("add-to-cart-button");
