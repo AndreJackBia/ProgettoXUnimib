@@ -41,8 +41,8 @@ namespace WindowsFormsApplication1
         string urlModello = "http://www.supremenewyork.com/shop/y5m740d6k.html";
         string utf8 = "\\342\\234\\223";
         string authenticity_token = "sl3+IhO1oTLi64kWYKqDWDtnachUToj84ypyPVmX2WA=";
-        string size = "29820";
-        string qty = "1";
+        string size = "29821";
+        string qty = "2";
 
         Stopwatch stopwatch;
         private const int INTERNET_OPTION_END_BROWSER_SESSION = 42;
@@ -91,10 +91,10 @@ namespace WindowsFormsApplication1
 
                 Console.WriteLine("absolute path : {0}, absolute uri : {1}, toString() : {2}", e.Url.AbsolutePath, e.Url.AbsoluteUri, e.Url.ToString());
                 
-                ((WebBrowser)sender).Document.GetElementById("utf8").SetAttribute("utf8", utf8);
-                ((WebBrowser)sender).Document.GetElementById("authenticity_token").SetAttribute("authenticity_token", authenticity_token);
-                ((WebBrowser)sender).Document.GetElementById("size").SetAttribute("size", size);
-                ((WebBrowser)sender).Document.GetElementById("qty").SetAttribute("qty", qty);
+                ((WebBrowser)sender).Document.GetElementById("utf8").SetAttribute("value", utf8);
+                ((WebBrowser)sender).Document.GetElementById("authenticity_token").SetAttribute("value", authenticity_token);
+                ((WebBrowser)sender).Document.GetElementById("size").SetAttribute("value", size);
+                ((WebBrowser)sender).Document.GetElementById("qty").SetAttribute("value", qty);
                 HtmlElementCollection addToBasket = ((WebBrowser)sender).Document.GetElementsByTagName("input").GetElementsByName("commit");
                 addToBasket[0].InvokeMember("Click");
 
@@ -110,9 +110,6 @@ namespace WindowsFormsApplication1
 
                     HtmlElementCollection cartButton = ((WebBrowser)sender).Document.GetElementsByTagName("button").GetElementsByName("dwfrm_cart_checkoutCart");
                     cartButton[0].InvokeMember("Click");
-
-
-
 
                     /*HtmlElementCollection elc = ((WebBrowser)sender).Document.GetElementsByTagName("input");
                     HtmlElementCollection elc1 = ((WebBrowser)sender).Document.GetElementsByTagName("button");
@@ -441,8 +438,3 @@ namespace WindowsFormsApplication1
      }*/
 
 }
-
-
-
-
-
